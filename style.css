@@ -25,8 +25,8 @@ body {
 h1 {
     font-weight: normal;
     font-size: 3rem;
-    margin-top: -14rem;
-    margin-bottom: 9rem;
+    margin-top: -13rem;
+    margin-bottom: 10rem;
 }
 
 .bg-block {
@@ -37,11 +37,16 @@ h1 {
     z-index: -1;
     border: none;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container-block {
+.countdown-container {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
     background: linear-gradient(90deg, #57a7f1 0%, #7774ed 80%);
     background: -moz-linear-gradient(90deg, #57a7f1 0%, #7774ed 80%);
     background: -webkit-linear-gradient(90deg, #57a7f1 0%, #7774ed 80%);
@@ -50,20 +55,13 @@ h1 {
 
     width: 70%;
     height: 25%;
-    position: fixed;
     z-index: -1;
     border: none;
     border-radius: 10px;
     margin-top: -2rem;
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-}
-
-.countdown-container {
-    display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    padding: 1rem;
 }
 
 .cd-el span {
@@ -75,4 +73,73 @@ h1 {
     font-size: 6rem;
     margin: 0 1.5rem;
     line-height: 1;
+}
+
+/* Media Queries */
+/* Mobile S - M */
+@media only screen and (min-device-width: 320px) and (max-device-width: 424px) {
+    .colon {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: -10rem;
+        margin-bottom: 8rem;
+    }
+
+    .large-text {
+        font-size: 3rem;
+    }
+
+    .bg-block {
+        width: 45%;
+        height: 40%;
+    }
+
+    .countdown-container {
+        padding: 0.5rem;
+    }
+}
+
+/* Mobile L */
+@media only screen and (min-device-width: 425px) and (max-device-width: 767px) {
+    .colon {
+        display: none;
+    }
+
+    h1 {
+        margin-top: -9rem;
+        margin-bottom: 7rem;
+    }
+
+    .large-text {
+        font-size: 4rem;
+    }
+
+    .bg-block {
+        width: 45%;
+        height: 50%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    .colon {
+        display: none;
+    }
+
+    h1 {
+        margin-top: -9rem;
+        margin-bottom: 7rem;
+    }
+
+    .bg-block {
+        width: 45%;
+        height: 50%;
+    }
+
+    .countdown-container {
+        width: 90%;
+    }
 }
